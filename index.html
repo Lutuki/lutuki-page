@@ -6,15 +6,7 @@
     <title>LutukiSolo</title>
     <link rel="icon" href="img/discord_fto.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <script>
-        (function(){
-            var dismissed = localStorage.getItem('mobileBlockDismissed') === 'true';
-            if (window.innerWidth < 768 && !dismissed) {
-                document.documentElement.classList.add('mobile-block-active');
-            }
-        })();
-    </script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Lutuki/lutuki-page/index.css">
 </head>
 <body>
     <div class="mobile-overlay" role="dialog" aria-modal="true" aria-labelledby="mobileOverlayTitle">
@@ -24,6 +16,13 @@
         </div>
     </div>
     <script>
+        (function(){
+            var dismissed = localStorage.getItem('mobileBlockDismissed') === 'true';
+            if (window.innerWidth < 768 && !dismissed) {
+                document.documentElement.classList.add('mobile-block-active');
+            }
+        })();
+		
         (function(){
             var closeBtn = document.getElementById('mobileOverlayClose');
             function update(){
