@@ -14,16 +14,7 @@
             }
         })();
     </script>
-    <style>
-        .mobile-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:2147483647;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);color:#f0f0f0;text-align:center;padding:16px;overflow-y:auto}
-        .mobile-overlay .content{width:min(92vw,720px);display:flex;flex-direction:column;align-items:center;gap:16px;padding:8px}
-        .mobile-overlay .message{font-size:clamp(24px,5vw,32px);line-height:1.5;margin:0;text-align:center;overflow-wrap:break-word;word-break:break-word}
-        .mobile-overlay button{font-size:18px;padding:12px 20px;background:#ffffff;color:#111;border:none;border-radius:8px;cursor:pointer}
-        .mobile-overlay button:focus{outline:2px solid #fff;outline-offset:2px}
-        html.mobile-block-active .mobile-overlay{display:flex}
-        html.mobile-block-active, html.mobile-block-active body{overflow:hidden!important}
-    </style>
-    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="mobile-overlay" role="dialog" aria-modal="true" aria-labelledby="mobileOverlayTitle">
