@@ -884,11 +884,9 @@ body.modal-open {
 
 /* Estilos para el footer */
 .footer {
-    background-color: var(--card-color);
     padding: 1rem 0;
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     /* Eliminar cualquier margen o padding inferior que pueda causar el espacio negro */
     margin-bottom: 0;
     position: relative; /* Asegurar que no haya espacio debajo */
@@ -911,3 +909,73 @@ header.hidden {
     transform: translateY(-100%);
     box-shadow: none;
 }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .container {
+            flex: 1;
+        }
+        
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        .error-code {
+            font-size: 10rem; /* Aumentado de 8rem */
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff4b4b, #ff0000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1;
+            text-shadow: 0 2px 10px rgba(255, 94, 58, 0.2); /* Añadido efecto de sombra */
+        }
+        
+        .error-message {
+            font-size: 2rem; /* Aumentado de 1.5rem */
+            margin-bottom: 1.5rem;
+            color: var(--accent-color); /* Añadido color naranja */
+        }
+        
+        .error-description {
+            color: #aaa; /* Aclarado de #888 */
+            margin-bottom: 2rem;
+            max-width: 600px;
+            font-size: 1.1rem; /* Aumentado tamaño */
+        }
+        
+        .home-button {
+            background: linear-gradient(135deg, #ff4b4b, #ff0000);
+            color: white;
+            border: none;
+            margin-top: 20px;
+            padding: 1rem 2.5rem; /* Aumentado de 0.8rem 2rem */
+            border-radius: 50px;
+            font-size: 1.1rem; /* Aumentado de 1rem */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold; /* Añadido negrita */
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 94, 58, 0.3); /* Cambiado de rgba(0, 0, 0, 0.2) */
+        }
+		header {
+			background: linear-gradient(135deg, #ff4b4b, #ff0000);
+		}
