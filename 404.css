@@ -6,9 +6,12 @@
     --secondary-color: #2c2c2c;
     --watched-color: #4caf50;
     /* Reducir la altura del header */
-    --header-height: 60px; /* Reducido de 90px a 60px */
-    --primary-color: #ff7700; /* Cambiado de #6a11cb (púrpura) a naranja */
-    --gradient-color: #ff5e3a; /* Cambiado de #2575fc (azul) a naranja más claro */
+    --header-height: 60px;
+    /* Reducido de 90px a 60px */
+    --primary-color: #ff7700;
+    /* Cambiado de #6a11cb (púrpura) a naranja */
+    --gradient-color: #ff5e3a;
+    /* Cambiado de #2575fc (azul) a naranja más claro */
 }
 
 * {
@@ -27,18 +30,20 @@ body {
 /* Ajustar el header para que sea más corto */
 /* Estilos para el header con el botón de exportar */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--gradient-color));
+    background: transparent;
     padding: 0.5rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: none;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrar el contenido */
+    justify-content: center;
+    /* Centrar el contenido */
     height: var(--header-height);
     transition: all 0.3s ease-in-out;
-    position: relative; /* Añadir posición relativa para posicionar el botón */
+    position: relative;
+    /* Añadir posición relativa para posicionar el botón */
 }
 
 /* Ajustar el título para que esté centrado */
@@ -59,10 +64,14 @@ h1 {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: absolute; /* Posicionar absolutamente */
-    right: 1rem; /* Colocar a la derecha */
-    top: 50%; /* Centrar verticalmente */
-    transform: translateY(-50%); /* Ajustar para centrado vertical perfecto */
+    position: absolute;
+    /* Posicionar absolutamente */
+    right: 1rem;
+    /* Colocar a la derecha */
+    top: 50%;
+    /* Centrar verticalmente */
+    transform: translateY(-50%);
+    /* Ajustar para centrado vertical perfecto */
 }
 
 .export-button:hover {
@@ -81,7 +90,8 @@ h1 {
     color: var(--text-color);
 }
 
-.export-section, .import-section {
+.export-section,
+.import-section {
     margin-bottom: 2rem;
     background-color: var(--card-color);
     padding: 1.5rem;
@@ -116,7 +126,8 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-#export-code, #import-code {
+#export-code,
+#import-code {
     width: 100%;
     height: 100px;
     background-color: var(--secondary-color);
@@ -150,7 +161,8 @@ h1 {
 
 /* Ajustar el título para que tenga un margen adecuado */
 h1 {
-    margin: 0; /* Eliminar margen inferior */
+    margin: 0;
+    /* Eliminar margen inferior */
     font-size: 1.5rem;
     text-align: center;
 }
@@ -160,8 +172,10 @@ h1 {
     display: flex;
     width: 100%;
     max-width: 500px;
-    margin: 1.5rem auto; /* Centrar horizontalmente con margen automático */
-    justify-content: center; /* Centrar los elementos internos */
+    margin: 1.5rem auto;
+    /* Centrar horizontalmente con margen automático */
+    justify-content: center;
+    /* Centrar los elementos internos */
 }
 
 #search-input {
@@ -211,6 +225,7 @@ h1 {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -300,9 +315,11 @@ h1 {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -374,9 +391,11 @@ h1 {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0;
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.5);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
@@ -473,6 +492,7 @@ h1 {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -496,6 +516,7 @@ h1 {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -512,6 +533,7 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(-20px);
@@ -522,6 +544,7 @@ h1 {
 body.modal-open {
     overflow: hidden;
 }
+
 .close-modal {
     position: absolute;
     top: 10px;
@@ -534,7 +557,8 @@ body.modal-open {
 
 .video-container {
     position: relative;
-    padding-bottom: 75%; /* Aumentado para dar más espacio al iframe */
+    padding-bottom: 75%;
+    /* Aumentado para dar más espacio al iframe */
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -558,7 +582,8 @@ body.modal-open {
     margin-bottom: 15px;
 }
 
-.loading-message, .error-message {
+.loading-message,
+.error-message {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -587,7 +612,8 @@ body.modal-open {
     margin-top: 15px;
 }
 
-.retry-button, .open-external-button {
+.retry-button,
+.open-external-button {
     background-color: #6c5ce7;
     color: white;
     border: none;
@@ -621,9 +647,17 @@ body.modal-open {
 }
 
 @keyframes pulse {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
 }
 
 .episode-info {
@@ -662,9 +696,11 @@ body.modal-open {
     0% {
         box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
     }
@@ -699,9 +735,11 @@ body.modal-open {
     flex-wrap: wrap;
     gap: 0.5rem;
     position: relative;
-    z-index: 50; /* Menor que el z-index del header (100) */
+    z-index: 50;
+    /* Menor que el z-index del header (100) */
     transition: margin-top 0.3s ease-in-out;
-    padding-top: 1rem; /* Espacio adicional para evitar solapamiento */
+    padding-top: 1rem;
+    /* Espacio adicional para evitar solapamiento */
 }
 
 .filter-button {
@@ -716,7 +754,8 @@ body.modal-open {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    border-radius: 20px; /* Añadir bordes redondeados */
+    border-radius: 20px;
+    /* Añadir bordes redondeados */
 }
 
 .filter-button:hover {
@@ -729,30 +768,38 @@ body.modal-open {
 .filter-button.active {
     background: linear-gradient(135deg, var(--primary-color), var(--gradient-color));
     border-color: transparent;
-    box-shadow: 0 4px 8px rgba(255, 94, 58, 0.4); /* Cambiado de rgba(106, 17, 203, 0.4) */
+    box-shadow: 0 4px 8px rgba(255, 94, 58, 0.4);
+    /* Cambiado de rgba(106, 17, 203, 0.4) */
     animation: pulse 1s ease-in-out;
 }
 
 /* Cambiar el color de la animación pulse */
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 94, 58, 0.7); /* Cambiado de rgba(106, 17, 203, 0.7) */
+        box-shadow: 0 0 0 0 rgba(255, 94, 58, 0.7);
+        /* Cambiado de rgba(106, 17, 203, 0.7) */
     }
+
     70% {
-        box-shadow: 0 0 0 10px rgba(255, 94, 58, 0); /* Cambiado de rgba(106, 17, 203, 0) */
+        box-shadow: 0 0 0 10px rgba(255, 94, 58, 0);
+        /* Cambiado de rgba(106, 17, 203, 0) */
     }
+
     100% {
-        box-shadow: 0 0 0 0 rgba(255, 94, 58, 0); /* Cambiado de rgba(106, 17, 203, 0) */
+        box-shadow: 0 0 0 0 rgba(255, 94, 58, 0);
+        /* Cambiado de rgba(106, 17, 203, 0) */
     }
 }
 
 /* Cambiar el color azul de los badges */
 .new-episode {
-    background-color: #ff7700; /* Cambiado de #2575fc (azul) */
+    background-color: #ff7700;
+    /* Cambiado de #2575fc (azul) */
 }
 
 .new-episode:hover {
-    background-color: #ff5e3a; /* Cambiado de #0b64ff (azul oscuro) */
+    background-color: #ff5e3a;
+    /* Cambiado de #0b64ff (azul oscuro) */
 }
 
 .toggle-all-watched-button {
@@ -782,6 +829,7 @@ body.modal-open {
     display: inline-block;
     vertical-align: middle;
 }
+
 /* Estilos para la paginación */
 .pagination {
     display: flex;
@@ -816,12 +864,12 @@ body.modal-open {
         flex-wrap: wrap;
         gap: 0.5rem;
     }
-    
+
     .pagination-button {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
     }
-    
+
     .page-info {
         font-size: 0.8rem;
         width: 100%;
@@ -833,7 +881,8 @@ body.modal-open {
 
 /* Estilo para episodios en modo desmarcar */
 .episode.unwatch-mode:hover {
-    background-color: #ff5252; /* Rojo para indicar que se va a desmarcar */
+    background-color: #ff5252;
+    /* Rojo para indicar que se va a desmarcar */
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
@@ -841,14 +890,17 @@ body.modal-open {
 
 /* Estilo para episodios no lanzados (amarillo) */
 .new-episode {
-    background-color: #FFD700; /* Color amarillo para episodios no lanzados */
-    color: #000; /* Texto negro para mejor contraste */
+    background-color: #FFD700;
+    /* Color amarillo para episodios no lanzados */
+    color: #000;
+    /* Texto negro para mejor contraste */
     position: relative;
     overflow: hidden;
 }
 
 .new-episode:hover {
-    background-color: #FFC107; /* Un amarillo más oscuro al hacer hover */
+    background-color: #FFC107;
+    /* Un amarillo más oscuro al hacer hover */
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 193, 7, 0.5);
 }
@@ -860,8 +912,10 @@ body.modal-open {
 }
 
 .new-episode-badge {
-    background-color: #ff9800; /* Color amarillo para episodios no lanzados */
-    color: #000; /* Texto negro para mejor contraste */
+    background-color: #ff9800;
+    /* Color amarillo para episodios no lanzados */
+    color: #000;
+    /* Texto negro para mejor contraste */
     position: relative;
     overflow: hidden;
 }
@@ -889,7 +943,8 @@ body.modal-open {
     margin-top: 2rem;
     /* Eliminar cualquier margen o padding inferior que pueda causar el espacio negro */
     margin-bottom: 0;
-    position: relative; /* Asegurar que no haya espacio debajo */
+    position: relative;
+    /* Asegurar que no haya espacio debajo */
     bottom: 0;
 }
 
@@ -904,78 +959,88 @@ body.modal-open {
     margin-top: 0.5rem;
     font-style: italic;
 }
+
 /* Añadir la clase hidden para ocultar el header al hacer scroll */
 header.hidden {
     transform: translateY(-100%);
     box-shadow: none;
 }
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        
-        .container {
-            flex: 1;
-        }
-        
-        .error-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 70vh;
-            text-align: center;
-            padding: 0 1rem;
-        }
-        
-        .error-code {
-            font-size: 10rem; /* Aumentado de 8rem */
-            font-weight: bold;
-            background: linear-gradient(135deg, #ff4b4b, #ff0000);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-            line-height: 1;
-            text-shadow: 0 2px 10px rgba(255, 94, 58, 0.2); /* Añadido efecto de sombra */
-        }
-        
-        .error-message {
-            font-size: 2rem; /* Aumentado de 1.5rem */
-            margin-bottom: 1.5rem;
-            color: var(--accent-color); /* Añadido color naranja */
-        }
-        
-        .error-description {
-            color: #aaa; /* Aclarado de #888 */
-            margin-bottom: 2rem;
-            max-width: 600px;
-            font-size: 1.1rem; /* Aumentado tamaño */
-        }
-        
-        .home-button {
-            background: linear-gradient(135deg, #ff4b4b, #ff0000);
-            color: white;
-            border: none;
-            margin-top: 20px;
-            padding: 1rem 2.5rem; /* Aumentado de 0.8rem 2rem */
-            border-radius: 50px;
-            font-size: 1.1rem; /* Aumentado de 1rem */
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold; /* Añadido negrita */
-        }
-        
-        .home-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 94, 58, 0.3); /* Cambiado de rgba(0, 0, 0, 0.2) */
-        }
-		header {
-			background: linear-gradient(135deg, #ff4b4b, #ff0000);
-		}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    flex: 1;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.error-code {
+    font-size: 10rem;
+    /* Aumentado de 8rem */
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff4b4b, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1;
+    text-shadow: 0 2px 10px rgba(255, 94, 58, 0.2);
+    /* Añadido efecto de sombra */
+}
+
+.error-message {
+    font-size: 2rem;
+    /* Aumentado de 1.5rem */
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    /* Añadido color naranja */
+}
+
+.error-description {
+    color: #aaa;
+    /* Aclarado de #888 */
+    margin-bottom: 2rem;
+    max-width: 600px;
+    font-size: 1.1rem;
+    /* Aumentado tamaño */
+}
+
+.home-button {
+    background: linear-gradient(135deg, #ff4b4b, #ff0000);
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 1rem 2.5rem;
+    /* Aumentado de 0.8rem 2rem */
+    border-radius: 50px;
+    font-size: 1.1rem;
+    /* Aumentado de 1rem */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    /* Añadido negrita */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        display: none !important;
+        box-shadow: none !important;
+    }
+}
